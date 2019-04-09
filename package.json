@@ -5,6 +5,6 @@
   },
   "scripts": {
     "start": "electron .",
-    "test": "xvfb-run --auto-servernum electron ."
+    "test": "xvfb-run --auto-servernum npm start"
   }
 }
