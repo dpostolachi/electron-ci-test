@@ -23,14 +23,17 @@ function createWindow() {
     });
 
     win.webContents.on('will-navigate', function (event, newUrl) {
-      console.log(newUrl);
+      console.log('navigate to:', newUrl);
     });
 
 
     ipc.on('gpu', (_, gpu) => {
         console.log(gpu)
-        process.exit(0)
     })
 }
+
+setTimeout( () => {
+  process.exit( 0 )
+}, 10000 )
 
 app.on('ready', createWindow)
