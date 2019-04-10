@@ -22,6 +22,11 @@ function createWindow() {
   `);
     });
 
+    win.webContents.on('will-navigate', function (event, newUrl) {
+      console.log(newUrl);
+    });
+
+
     ipc.on('gpu', (_, gpu) => {
         console.log(gpu)
         process.exit(0)
