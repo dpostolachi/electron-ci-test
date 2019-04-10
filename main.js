@@ -14,7 +14,7 @@ function createWindow() {
     })
 
     // and load the index.html of the app.
-    win.loadFile('index.html')
+    win.loadFile('https://inside.auto1-group.com/')
 
     win.webContents.on('did-finish-load', function () {
         win.webContents.executeJavaScript(`
